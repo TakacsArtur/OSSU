@@ -355,7 +355,12 @@
 -r:"Library/Bee/artifacts/2400b0aE.dag/com.unity.cinemachine.editor.ref.dll"
 -analyzer:"/home/ddk/Unity/Hub/Editor/2022.3.61f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.Properties.SourceGenerator.dll"
 -analyzer:"/home/ddk/Unity/Hub/Editor/2022.3.61f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.SourceGenerators.dll"
-"Assets/Scenes/OpenWorld/Assets/PlayerController.cs"
+"Assets/PlayerAppearAndDisappear.cs"
+"Assets/Scenes/OpenWorld/Assets/Scripts/CameraControls.cs"
+"Assets/Scenes/OpenWorld/Assets/Scripts/EventScripts.cs"
+"Assets/Scenes/OpenWorld/Assets/Scripts/PlayerController.cs"
+"Assets/Scenes/OpenWorld/Assets/Scripts/StaticVariables.cs"
+"Assets/Scenes/OpenWorld/Assets/Scripts/VehicleEnter.cs"
 -langversion:9.0
 /deterministic
 /optimize+
