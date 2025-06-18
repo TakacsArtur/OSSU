@@ -361,6 +361,7 @@
 "Assets/Scenes/OpenWorld/Assets/Scripts/PlayerController.cs"
 "Assets/Scenes/OpenWorld/Assets/Scripts/StaticVariables.cs"
 "Assets/Scenes/OpenWorld/Assets/Scripts/VehicleEnter.cs"
+"Assets/VehicleControls.cs"
 -langversion:9.0
 /deterministic
 /optimize+

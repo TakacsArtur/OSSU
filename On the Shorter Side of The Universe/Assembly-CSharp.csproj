@@ -70,6 +70,7 @@
     <Compile Include="Assets/Scenes/OpenWorld/Assets/Scripts/VehicleEnter.cs" />
     <Compile Include="Assets/Scenes/OpenWorld/Assets/Scripts/PlayerController.cs" />
     <Compile Include="Assets/Scenes/OpenWorld/Assets/Scripts/StaticVariables.cs" />
+    <Compile Include="Assets/VehicleControls.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets/TextMesh Pro/Shaders/TMPro.cginc" />

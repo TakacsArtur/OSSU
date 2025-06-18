@@ -15,6 +15,6 @@ public class PlayerAppearAndDisappear : MonoBehaviour
 
     void PlayerInVehicle()
     {
-        transform.position = new Vector3(0, -10000, 0);
+        gameObject.SetActive(false);
     }
 }
