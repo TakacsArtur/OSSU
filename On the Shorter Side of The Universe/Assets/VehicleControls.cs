@@ -68,7 +68,10 @@ public class VehicleControls : MonoBehaviour
                     Debug.Log("Vertical" + vertical);
                     Debug.Log(velocity);
                 }
-                GetComponent<Rigidbody>().AddForce(new Vector3(0,0,1)*-1000);
+                //gameObject.transform.position += transform.right * (vertical * 10);
+                GetComponent<Rigidbody>().AddForce(transform.right * (vertical * 100), ForceMode.Acceleration);
+                transform.RotateAround(transform.position, new Vector3(0, Input.GetAxis("Horizontal"), 0), Time.deltaTime * 50);
+                
             }
         }
     }
