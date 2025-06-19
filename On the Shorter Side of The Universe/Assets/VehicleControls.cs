@@ -1,3 +1,4 @@
+using Cinemachine;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -11,8 +12,10 @@ public class VehicleControls : MonoBehaviour
     private bool vehicleStarted = false;
     private float velocity = 0, vertical,horizontal;
 
+    private int tick = 0;
+
     [Header("Vehicle Properties")]
-    [SerializeField] private float maxSpeed = 100;
+    [SerializeField] private float maxSpeed = 15;
 
     [Header("Dependencies")]
     [SerializeField] private GameObject EventSystem;
@@ -34,17 +37,22 @@ public class VehicleControls : MonoBehaviour
     {
         horizontal = Input.GetAxis("Horizontal");
         vertical = Input.GetAxis("Vertical");
+
+        horizontal *= 1F;
+        vertical *= 1F;
     }
 
     float calculateSpeed(Vector3 currentPos)
     {
-        float currentSpeed = (currentPos - lastPos).magnitude;
+
+        float currentSpeed= (currentPos - lastPos).magnitude;
         lastPos = currentPos;
         return currentSpeed;
+        
     }
      
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         if (vehicleStarted)
         {
@@ -58,12 +66,9 @@ public class VehicleControls : MonoBehaviour
                 {
                     Debug.Log("Horizontal" + horizontal);
                     Debug.Log("Vertical" + vertical);
-                    Debug.Log(transform.position);
+                    Debug.Log(velocity);
                 }
-                Vector3 verticalAcceleration = new Vector3(transform.position.x + vertical * 50, transform.position.y, transform.position.z + vertical * 50);
-                GetComponent<Rigidbody>().AddForce(verticalAcceleration, ForceMode.Acceleration);
-
-
+                GetComponent<Rigidbody>().AddForce(new Vector3(0,0,1)*-1000);
             }
         }
     }
