@@ -1,3 +1,4 @@
+using System;
 using Cinemachine;
 using TMPro;
 using Unity.VisualScripting;
@@ -59,7 +60,7 @@ public class VehicleControls : MonoBehaviour
             ScanInput();
             //this will be used for top speed limiting
             velocity = calculateSpeed(transform.position);
-            DisplayText.text = "Speed " + velocity;
+            DisplayText.text = "Speed " + Math.Round(velocity, 1) * 10;
             if (velocity < maxSpeed)
             {
                 if (StaticVariables.DebugVehicleDynamics)
