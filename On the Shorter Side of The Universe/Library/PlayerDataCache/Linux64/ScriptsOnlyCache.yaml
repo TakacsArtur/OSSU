@@ -1,7 +1,12 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
+    - CameraControls
+    - EventScripts
+    - PlayerAppearAndDisappear
     - PlayerController
+    - VehicleControls
+    - VehicleEnter
     Cinemachine.dll:
     - Cinemachine.CinemachineBrain
     - Cinemachine.CinemachineHardLockToTarget
@@ -9,10 +14,26 @@ ScriptsOnlyBuild:
     - Cinemachine.CinemachineVirtualCamera
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
+    Unity.TextMeshPro:
+    - TMPro.TMP_FontAsset
+    - TMPro.TMP_Settings
+    - TMPro.TMP_SpriteAsset
+    - TMPro.TMP_StyleSheet
+    Unity.TextMeshPro.dll:
+    - TMPro.TMP_FontAsset
+    - TMPro.TMP_Settings
+    - TMPro.TMP_SpriteAsset
+    - TMPro.TMP_StyleSheet
+    - TMPro.TextMeshProUGUI
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
     - UnityEditor.TestTools.TestRunner.TestListCacheData
     - UnityEditor.TestTools.TestRunner.TestRun.TestJobDataHolder
+    UnityEngine.UI.dll:
+    - UnityEngine.EventSystems.EventSystem
+    - UnityEngine.EventSystems.StandaloneInputModule
+    - UnityEngine.UI.CanvasScaler
+    - UnityEngine.UI.GraphicRaycaster
   serializedClasses:
     Cinemachine:
     - Cinemachine.CinemachineBlendDefinition
@@ -20,8 +41,30 @@ ScriptsOnlyBuild:
     - Cinemachine.CinemachineBrain/VcamActivatedEvent
     - Cinemachine.CinemachineVirtualCameraBase/TransitionParams
     - Cinemachine.LensSettings
+    Unity.TextMeshPro:
+    - TMPro.FaceInfo_Legacy
+    - TMPro.FontAssetCreationSettings
+    - TMPro.KerningTable
+    - TMPro.TMP_Character
+    - TMPro.TMP_FontFeatureTable
+    - TMPro.TMP_FontWeightPair
+    - TMPro.TMP_GlyphAdjustmentRecord
+    - TMPro.TMP_GlyphPairAdjustmentRecord
+    - TMPro.TMP_GlyphValueRecord
+    - TMPro.TMP_Sprite
+    - TMPro.TMP_SpriteCharacter
+    - TMPro.TMP_SpriteGlyph
+    - TMPro.TMP_Style
+    - TMPro.VertexGradient
     UnityEngine.CoreModule:
     - UnityEngine.Events.PersistentCallGroup
+    UnityEngine.TextCoreFontEngineModule:
+    - UnityEngine.TextCore.FaceInfo
+    - UnityEngine.TextCore.Glyph
+    - UnityEngine.TextCore.GlyphMetrics
+    - UnityEngine.TextCore.GlyphRect
+    UnityEngine.UI:
+    - UnityEngine.UI.MaskableGraphic/CullStateChangedEvent
   methodsToPreserve: []
   sceneClasses:
     Assets/Scenes/OpenWorld/OpenWorld.unity:
@@ -43,7 +86,13 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 48
       Script: {instanceID: 0}
+    - Class: 49
+      Script: {instanceID: 0}
+    - Class: 54
+      Script: {instanceID: 0}
     - Class: 64
+      Script: {instanceID: 0}
+    - Class: 65
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
@@ -52,22 +101,58 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 17682}
+      Script: {instanceID: 17346}
     - Class: 114
-      Script: {instanceID: 17820}
+      Script: {instanceID: 17708}
     - Class: 114
-      Script: {instanceID: 19372}
+      Script: {instanceID: 17778}
     - Class: 114
-      Script: {instanceID: 20872}
+      Script: {instanceID: 17846}
     - Class: 114
-      Script: {instanceID: 22402}
+      Script: {instanceID: 17990}
+    - Class: 114
+      Script: {instanceID: 18234}
+    - Class: 114
+      Script: {instanceID: 19336}
+    - Class: 114
+      Script: {instanceID: 19402}
+    - Class: 114
+      Script: {instanceID: 19608}
+    - Class: 114
+      Script: {instanceID: 19884}
+    - Class: 114
+      Script: {instanceID: 20350}
+    - Class: 114
+      Script: {instanceID: 20904}
+    - Class: 114
+      Script: {instanceID: 20934}
+    - Class: 114
+      Script: {instanceID: 21116}
+    - Class: 114
+      Script: {instanceID: 21446}
+    - Class: 114
+      Script: {instanceID: 21746}
+    - Class: 114
+      Script: {instanceID: 21998}
+    - Class: 114
+      Script: {instanceID: 22438}
+    - Class: 114
+      Script: {instanceID: 22488}
     - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
       Script: {instanceID: 0}
     - Class: 143
       Script: {instanceID: 0}
     - Class: 157
       Script: {instanceID: 0}
     - Class: 196
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
       Script: {instanceID: 0}
   scriptHashData:
   - hash:
@@ -340,6 +425,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: UnityOnDropdownValueChangedMessageListener
+  - hash:
+      serializedVersion: 2
+      Hash: 5ae4bfa6ee4a1d362e7528acec56c8c9
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: CameraControls
   - hash:
       serializedVersion: 2
       Hash: a1ac4c50e55874de16eee3db71aa9784
@@ -628,6 +719,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: UnityOnPointerClickMessageListener
+  - hash:
+      serializedVersion: 2
+      Hash: e488a636e4ceafa51b98d8674a84904f
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: PlayerAppearAndDisappear
   - hash:
       serializedVersion: 2
       Hash: 0b63f6d3335e11939ce8790b904c8691
@@ -924,6 +1021,12 @@ ScriptsOnlyBuild:
     className: TextContainer
   - hash:
       serializedVersion: 2
+      Hash: 7042e6ebb9ff3462c62990114b812ddb
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: EventScripts
+  - hash:
+      serializedVersion: 2
       Hash: f669be52680c88846b2093fd41d1e06e
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
@@ -970,6 +1073,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: UnityOnTriggerEnter2DMessageListener
+  - hash:
+      serializedVersion: 2
+      Hash: 78839cccf742fc146a80f57dc5687dc3
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: VehicleControls
   - hash:
       serializedVersion: 2
       Hash: 7bb32d6e4c7614a97d9723ce7e26588c
@@ -1074,10 +1183,16 @@ ScriptsOnlyBuild:
     className: UnityOnMoveMessageListener
   - hash:
       serializedVersion: 2
-      Hash: b4dbbb41a0583a9398915fc6e17c3393
+      Hash: 4f1bc935d48460949fe7af9d2d04d452
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: PlayerController
+  - hash:
+      serializedVersion: 2
+      Hash: 2d7d634d0fb517f62a7a8e96525e4c1c
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: VehicleEnter
   - hash:
       serializedVersion: 2
       Hash: d0392b7f3f52d5af537ade186b4f51f1
@@ -1195,4 +1310,4 @@ ScriptsOnlyBuild:
   platform: 24
   scenePathNames:
   - Assets/Scenes/OpenWorld/OpenWorld.unity
-  playerPath: /home/ddk/Documents/Github/OSSU/OSSUBuilds/ResTest.x86_64
+  playerPath: /home/ddk/Documents/Github/OSSU/OSSUBuilds/Driving/DrivingV1.x86_64
